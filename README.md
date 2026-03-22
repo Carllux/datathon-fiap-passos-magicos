@@ -32,7 +32,7 @@ O sistema atua em duas frentes principais:
 ## 📄 Storytelling do Projeto
 
 <a href="POSTECH - Fase 5 - Storytelling.pdf">
-  <img src="storytelling_preview.png" alt="Storytelling Preview"/>
+  <img src="storytelling_preview.jpg" alt="Storytelling Preview"/>
 </a>
 
 ## 🚀 Funcionalidades e Modelos
