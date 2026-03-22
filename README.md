@@ -65,9 +65,65 @@ Aplicação web interativa desenvolvida com **Streamlit**, permitindo:
 
 ## 🚀 Instalação
 
-> 💡 Recomendado: utilize ambiente virtual (`venv`)
+> 💡 Recomendado: utilize um ambiente virtual (`venv`) para garantir o isolamento das dependências.
 
-### 1. Criar o ambiente virtual
+### 1. Clone o repositório
 
 ```bash
-python -m venv venv
+git clone --branch main https://github.com/Carllux/datathon-fiap-passos-magicos.git
+cd datathon-fiap-passos-magicos
+```
+
+### 2. Crie o ambiente virtual
+
+```bash
+python -m venv .venv
+```
+
+### 3. Ative o ambiente virtual
+
+- **Windows**:
+  ```bash
+  .\.venv\Scripts\activate
+  ```
+
+- **Linux/macOS**:
+  ```bash
+  source .venv/bin/activate
+  ```
+
+### 4. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Execução
+
+```bash
+streamlit run Inicio.py
+```
+
+
+---
+
+### 🛠️ Estratégia de Desenvolvimento
+```markdown
+## 🛠️ Estratégia de Desenvolvimento
+
+### 1. Notebooks e Análise
+
+Os notebooks em `/notebooks` cobrem todo o pipeline:
+
+- Análise Exploratória de Dados (EDA)
+- Tratamento e limpeza
+- Engenharia de atributos
+- Treinamento e validação
+
+---
+
+### 2. Modelagem
+
+- Modelo baseado em **Random Forest** para classificação tabular
+- Modelo de **Deep Learning** para capturar padrões complexos
+- Uso de dados educacionais + sociais
