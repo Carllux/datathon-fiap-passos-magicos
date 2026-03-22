@@ -1,142 +1,177 @@
-📊 Datathon - ONG Passos Mágicos
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge" alt="Status: Finalizado"/>
+  <img src="https://img.shields.io/badge/Python-3.11.9-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11.9"/>
+  <img src="https://img.shields.io/badge/Bibliotecas-Scikit--learn%20|%20XGBoost%20|%20LightGBM%20|%20TensorFlow%20|%20Optuna-orange?style=for-the-badge" alt="Bibliotecas: Scikit-learn | XGBoost | LightGBM | TensorFlow | Optuna"/>
+  <a href="https://www.youtube.com/watch?v=8r_cYf1fLIM"><img src="https://img.shields.io/badge/Assistir%20à%20Apresentação-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir à Apresentação"/></a>
+</p>
 
-Projeto de análise de dados e modelagem preditiva desenvolvido para o Datathon da ONG Passos Mágicos.
 
-O objetivo é apoiar a identificação de alunos com maior necessidade de apoio educacional, utilizando modelos de Machine Learning aplicados a indicadores acadêmicos e sociais.
+# 📊 Tech Challenge: Modelo Preditivo para o IBOVESPA
 
-🚀 Funcionalidades
+Este repositório contém o desenvolvimento do projeto final para a **Fase 02** do curso de Pós-Graduação em Data Analytics da **FIAP POS-TECH**.
 
-O sistema possui duas principais análises:
 
-🔮 Predição de Ponto de Virada
+## 🎯 O Problema
 
-Estima a probabilidade de um aluno atingir um ponto de virada em sua trajetória educacional, considerando fatores como:
+A missão consistiu em atuar como cientista de dados em um fundo de investimentos brasileiro, com o desafio de criar um modelo preditivo da tendência diária do IBOVESPA.  
 
-desempenho acadêmico
+Sendo o objetivo classificar os movimentos do índice em duas categorias:
+- **Alta Significativa**
+- **Neutra**/**Baixa Significativa**
 
-situação psicossocial
+Servindo como uma ferramenta de apoio à tomada de decisão para analistas quantitativos.
 
-continuidade nos estudos
+---
+O projeto percorre todas as etapas do pipeline de Data Science:
+- Aquisição e tratamento de dados
+- Engenharia de atributos
+- Modelagem preditiva com múltiplos algoritmos
+- Seleção e validação rigorosa do modelo final
 
-vulnerabilidade
+---
 
-necessidade de apoio
 
-🎓 Predição de Indicação de Bolsa
+## ⚙️ Requisitos
 
-Estima a probabilidade de um aluno ser indicado para receber bolsa de estudos, com base em:
+- [Python 3.11.9](https://www.python.org/downloads/release/python-3119/)
+- `git` instalado
+- Acesso ao terminal ou prompt de comando
 
-desempenho acadêmico
+---
 
-engajamento
+## 🚀 Instalação
 
-desenvolvimento educacional
+> 💡 Recomendado: utilize um ambiente virtual (`venv`) para garantir o isolamento das dependências.
 
-permanência nos estudos
+### 1. Clone o repositório
 
-contexto social
+```bash
+git clone --branch main https://github.com/Carllux/FIAP-TC-2.git
+cd FIAP-TC-2
+```
 
-🧠 Modelos utilizados
+### 2. Crie o ambiente virtual
 
-Random Forest (Ponto de Virada)
+```bash
+python -m venv .venv
+```
 
-Rede Neural (Keras / TensorFlow) para Indicação de Bolsa
+### 3. Ative o ambiente virtual
 
-Os modelos já estão treinados e salvos no repositório (.pkl), não sendo necessário novo treinamento para execução do sistema.
+- **Windows**:
+  ```bash
+  .\.venv\Scripts\activate
+  ```
 
-🖥️ Interface
+- **Linux/macOS**:
+  ```bash
+  source .venv/bin/activate
+  ```
 
-O projeto possui uma interface interativa construída com Streamlit, permitindo a simulação de cenários a partir da entrada de indicadores.
+### 4. Instale as dependências
 
-⚙️ Configuração do Ambiente
-🐍 Versão do Python (IMPORTANTE)
-
-O projeto foi desenvolvido utilizando:
-
-Python 3.11
-
-Versões mais recentes (como 3.12, 3.13 ou 3.14) podem causar falhas, principalmente na instalação do TensorFlow.
-
-▶️ Como executar o projeto
-1. Criar ambiente virtual
-python -m venv venv
-2. Ativar ambiente
-
-Windows:
-
-venv\Scripts\activate
-3. Instalar dependências
+```bash
 pip install -r requirements.txt
-4. Executar aplicação
-streamlit run Inicio.py
+```
 
-A aplicação será aberta no navegador.
+> ⚠️ **Observação**: Caso encontre erros relacionados a compiladores C++ no Windows, pode ser necessário instalar o **Microsoft C++ Build Tools**.
 
-📓 Notebooks
+---
 
-Os notebooks utilizados no projeto estão disponíveis em:
+## 🛠️ Metodologia Aplicada
 
-notebooks/
+### 1. Aquisição e Pré-processamento dos Dados
 
-Eles incluem:
+- Coleta dos dados históricos diários do IBOVESPA.
+- Limpeza e padronização.
+- Conversão para `DatetimeIndex`.
+- Definição da variável-alvo (target).
 
-análise exploratória dos dados
+### 2. Engenharia de Atributos
 
-tratamento e preparação
+Criação de um conjunto diversificado de features:
 
-treinamento dos modelos
+- **Atributos Autoregressivos**: médias móveis, retornos defasados, etc.  
+- **Volatilidade e Candlestick**: variações entre máximas/mínimas e proporções de sombras.  
+- **Atributos Exógenos**: variações do Dólar (USD/BRL), S&P 500 e Petróleo Brent.  
+- **Interações**: combinações entre volatilidade e tendência.
 
-⚠️ Requisitos adicionais para notebooks
+### 3. Estratégia de Modelagem e Validação
 
-Para executar os notebooks, instale também:
+- **Modelagem por Regimes de Mercado**:  
+  Segmentação da série temporal em períodos como:
+  - "Boom das Commodities"
+  - "Pandemia"
+  - "Pós-Pandemia"
 
-pip install notebook seaborn plotly missingno imbalanced-learn ipykernel
-📂 Estrutura do projeto
+- **Modelos Testados**:
+  - Regressão Logística
+  - XGBoost
+  - LSTM
+
+- **Otimização de Hiperparâmetros**:
+  - Utilização da biblioteca **Optuna**.
+
+- **Validação Temporal Robusta**:
+  - Divisão dos dados em conjuntos de **Treino**, **Validação** e **Teste** respeitando a ordem cronológica.
+
+### 4. Modelo Final Selecionado
+
+- **Modelo**: Regressão Logística  
+- **Regime**: Pós-Pandemia (Juros Altos)  
+- **Justificativa**:
+  - Melhor desempenho na classe de maior interesse (Alta)
+  - Após balanceamento com `class_weight='balanced'`
+  - **Recall** de 41% e **F1-Score** de 0.39 para a classe 'Alta'
+
+---
+
+## 📁 Estrutura do Projeto
+
+```plaintext
 .
-├── Inicio.py
-├── pages/
-├── notebooks/
-├── output/
-├── *.pkl
-├── requirements.txt
-└── README.md
-📂 Dados
+├── data/                  # Bases de dados originais e transformadas
+├── docs/                  # PDF contendo o storytelling técnico do código
+├── notebooks/             # Jupyter Notebooks com experimentações
+├── src/                   # Código-fonte modularizado
+│   └── data/              # Carregamento, transformação e limpeza
+├── requirements.txt       # Dependências do projeto
+└── README.md              # Este arquivo
+```
 
-As bases originais utilizadas no projeto não estão incluídas no repositório devido ao tamanho.
+---
 
-O projeto utiliza apenas:
+## 🧪 Como Executar os Notebooks
 
-dados tratados
+Os notebooks seguem uma estrutura clara, com células organizadas em blocos funcionais e comentários explicativos.
 
-modelos treinados
+Você pode executá-los em ambientes como:
+- Jupyter Notebook
+- Google Colab
+- VSCode (com extensão Python ativa)
 
-arquivos necessários para execução da aplicação
+### Ordem recomendada:
+- `Com exceção do notebook 00_data_investigation.ipynb, é recomendada a execução de todos os notebooks de forma linear`
 
-❗ Observações importantes
+1. `01_Exploracao_e_Feature_Engineering.ipynb`  
+2. `02_Modelagem_e_Validacao.ipynb`
 
-Os modelos já estão treinados
+---
 
-Não é necessário executar os notebooks para usar o sistema
+## 🧵 Boas Práticas Adotadas
 
-O app funciona de forma independente
+- ✅ **Validação Temporal Robusta**
+- ✅ **Modelagem por Regimes de Mercado**
+- ✅ **Tratamento de Desbalanceamento com `class_weight`**
+- ✅ **Otimização Automatizada com Optuna**
+- ✅ **Pipeline Modular e Reutilizável**
+- ✅ **Avaliação Holística com múltiplas métricas**:
+  - `classification_report`
+  - `confusion_matrix`
+  - `ROC AUC`
 
-Caso queiram consultar o material usado para tratar as bases e treinar o modelo, segue o link: https://drive.google.com/file/d/1eCrv9xa3WHOgo6l4GNYQ24CVN_Z5To87/view
+---
 
-⚠️ Problemas comuns
-TensorFlow não instala
+## 📬 Contato
 
-Verifique se está usando Python 3.11
-
-Erros ao rodar notebooks
-
-Instale as dependências adicionais indicadas acima
-
-✅ Objetivo do projeto
-
-O projeto busca apoiar a tomada de decisão com base em dados, utilizando modelos preditivos para identificar padrões e auxiliar na priorização de alunos com maior necessidade de acompanhamento.
-
-As previsões geradas não substituem a análise humana, mas funcionam como suporte à decisão.
-
-👨‍💻 Autor
-
-Projeto desenvolvido por Diego Oliveira
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlos-vinicius-nascimento-de-jesus/)
