@@ -67,7 +67,7 @@ A aplicação foi desenvolvida utilizando **Streamlit**, permitindo simular cen�
 
 🔗 **Acesse a aplicação online:**
 
-<a href="https://datathon-fiap-paapps-magicos-gap5ickukarcqyvoge7gpe.streamlit.app/">
+<a href="https://dtth-fiap-p-magicos.streamlit.app/">
   <img src="https://img.shields.io/badge/🚀%20Acessar%20App%20Streamlit-green?style=for-the-badge&logo=streamlit&logoColor=white"/>
 </a>
 
