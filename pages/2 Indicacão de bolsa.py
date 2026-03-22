@@ -28,8 +28,8 @@ FEATURES = ["IAA", "IEG", "IPS", "IDA", "IPP", "IPV", "IAN", "INDE"]
 
 @st.cache_resource
 def load_assets():
-    model = joblib.load("perfil_receber_bolsa_estudos_model.pkl")
-    scaler = joblib.load("perfil_receber_bolsa_estudos_scaler.pkl")
+    model = joblib.load("models/perfil_receber_bolsa_estudos_model.pkl")
+    scaler = joblib.load("models/perfil_receber_bolsa_estudos_scaler.pkl")
     return model, scaler
 
 @st.cache_data
