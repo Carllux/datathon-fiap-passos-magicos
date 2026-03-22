@@ -88,6 +88,14 @@ A aplicação foi desenvolvida utilizando **Streamlit**, permitindo simular cen�
 
 > 💡 Recomendado: utilize um ambiente virtual (`venv`) para garantir o isolamento das dependências.
 
+## 📓 Dependências para análise e treinamento (opcional)
+
+Para executar os notebooks de análise exploratória e treinamento dos modelos, é necessário instalar dependências adicionais:
+
+```bash
+pip install plotly seaborn missingno imbalanced-learn ipykernel ipython nbformat
+```
+
 ### 1. Clone o repositório
 
 ```bash
