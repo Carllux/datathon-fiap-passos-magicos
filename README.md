@@ -32,7 +32,7 @@ O sistema atua em duas frentes principais:
 ## 📄 Storytelling do Projeto
 
 <a href="POSTECH - Fase 5 - Storytelling.pdf">
-  <img src="storytelling_preview.jpg" width="600"/>
+    <img src="storytelling_preview.jpg" alt="Storytelling Preview"/>
 </a>
 
 <br>
@@ -40,6 +40,7 @@ O sistema atua em duas frentes principais:
 <a href="POSTECH - Fase 5 - Storytelling.pdf">
   <img src="https://img.shields.io/badge/📄%20Baixar%20PDF-blue?style=for-the-badge"/>
 </a>
+
 ## 🚀 Funcionalidades e Modelos
 
 ### 🔮 Predição de Ponto de Virada
