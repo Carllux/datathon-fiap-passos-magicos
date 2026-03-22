@@ -55,22 +55,28 @@ O sistema atua em duas frentes principais:
 
 ---
 
-## 🖥️ Interface
+## 🖥️ Aplicação Interativa (Streamlit)
 
-Aplicação web interativa desenvolvida com **Streamlit**, permitindo:
+A aplicação foi desenvolvida utilizando **Streamlit**, permitindo simular cenários e visualizar predições em tempo real de forma simples e intuitiva.
 
-- Simulação de cenários
-- Visualização de predições em tempo real
+🔗 **Acesse a aplicação online:**
+
+<a href="https://datathon-fiap-paapps-magicos-gap5ickukarcqyvoge7gpe.streamlit.app/">
+  <img src="https://img.shields.io/badge/🚀%20Acessar%20App%20Streamlit-green?style=for-the-badge&logo=streamlit&logoColor=white"/>
+</a>
+
+---
+
+### 💡 O que você pode fazer no App
+
+- 🔮 Simular o **Ponto de Virada** de alunos  
+- 🎓 Avaliar a **probabilidade de Indicação de Bolsa**  
+- 📊 Explorar variáveis educacionais e sociais  
+- ⚡ Obter predições em tempo real  
 
 ---
 
-## ⚙️ Requisitos
-
-- Python 3.11  
-- `pip` atualizado  
-- Terminal ou prompt de comando  
-
----
+> 💡 **Dica:** Para melhor experiência, utilize o app em tela cheia e insira diferentes cenários para explorar o comportamento dos modelos.
 
 ## 🚀 Instalação
 
