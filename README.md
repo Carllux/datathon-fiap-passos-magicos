@@ -2,6 +2,9 @@
   <img src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge" alt="Status: Finalizado"/>
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11"/>
   <img src="https://img.shields.io/badge/Bibliotecas-Scikit--learn%20|%20TensorFlow%20|%20Keras%20|%20Streamlit-orange?style=for-the-badge" alt="Bibliotecas"/>
+  <a href="https://youtu.be/6g1-S-4taPg">
+    <img src="https://img.shields.io/badge/🎥%20Assistir%20à%20Apresentação-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir à Apresentação"/>
+  </a>
 </p>
 
 # 📊 Datathon: ONG Passos Mágicos
@@ -25,6 +28,12 @@ O sistema atua em duas frentes principais:
   Estimar a probabilidade de elegibilidade para apoio financeiro.
 
 ---
+
+## 📄 Storytelling do Projeto
+
+<a href="POSTECH - Fase 5 - Storytelling.pdf">
+  <img src="storytelling_preview.png" alt="Storytelling Preview"/>
+</a>
 
 ## 🚀 Funcionalidades e Modelos
 
