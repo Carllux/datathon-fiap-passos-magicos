@@ -4,3 +4,4 @@ numpy
 matplotlib
 scikit-learn
 altair<5
+imghdr
