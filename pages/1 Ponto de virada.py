@@ -25,8 +25,8 @@ O modelo utiliza dados de desempenho, contexto psicossocial, permanência nos es
 
 @st.cache_resource
 def load_model():
-    model = joblib.load("models/random_forest_ponto_virada_model.pkl")
-    scaler = joblib.load("models/random_forest_ponto_virada_scaler.pkl")
+    model = joblib.load("./models/random_forest_ponto_virada_model.pkl")
+    scaler = joblib.load("./models/random_forest_ponto_virada_scaler.pkl")
     return model, scaler
 
 @st.cache_data
