@@ -129,8 +129,6 @@ streamlit run Inicio.py
 ---
 
 ### 🛠️ Estratégia de Desenvolvimento
-```markdown
-## 🛠️ Estratégia de Desenvolvimento
 
 ### 1. Notebooks e Análise
 
